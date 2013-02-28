@@ -4,7 +4,7 @@ define('DESTINATION_EMAIL','tbennett@aii.edu');
 define('MESSAGE_SUBJECT','form Demo');
 define('REPLY_TO', 'tbennett@aii.edu');
 define('FROM_ADDRESS', 'tbennett@aii.edu');
-define('REDIRECT_URL', './');
+define('REDIRECT_URL', 'index.php');
 
 require_once('inc/config.php');
 require_once('inc/validation.php');
@@ -57,23 +57,33 @@ mysqli_close($db);
       <p><?php echo $intro; ?></p>
     </section>
     <section>
+		<ul class="errors">
+			<?php 
+			echo '<li>' . @$name_error . '</li>'; 
+			echo '<li>' . @$email_error . '</li>'; 
+			echo '<li>' . @$message_error . '</li>'; 
+			?>
+		</ul>
       	<form>
 			<fieldset>
 				<legend><h2>Contact Us</h2></legend>
 				<ul>
 				<li><label for="name">Name:</label>
-				<input type="text" name="name" placeholder="type name here" /><br class="clearfloat"></li>
+				<input type="text" name="name" placeholder="type name here" />
+				<br class="clearfloat"></li>
 				
 				<li><label for="email">Email:</label>
-				<input type="text" name="email" placeholder="type email here" /><br class="clearfloat"></li>
+				<input type="text" name="email" placeholder="type email here" />
+				<br class="clearfloat"></li>
 				
-				<li>
-					<input type="submit" name="submitted" value="submit comments now" /><br class="clearfloat">
-				</li>
-				
-				<li><label for="comments">Comments:</label>
-				<textarea name="comments" id="comments" cols="30" rows="5" 
+				<li><label for="message">Comments:</label>
+				<textarea name="message" cols="30" rows="5" 
 				placeholder="type comments here"></textarea><br class="clearfloat"></li>
+				
+				<li><label for="submitted"></label>
+				<input type="submit" name="submitted" value="submit comments now" />
+				<br class="clearfloat">
+				</li>
 				</ul>
 			</fieldset>
 		</form>
