@@ -6,8 +6,8 @@ define('REPLY_TO', 'tbennett@aii.edu');
 define('FROM_ADDRESS', 'tbennett@aii.edu');
 define('REDIRECT_URL', './');
 
-require_once('config.php');
-require_once('validation.php');
+require_once('inc/config.php');
+require_once('inc/validation.php');
 
 //get all content related to this page (home)
   $sql = "SELECT * FROM site_content WHERE page_name='contact'";
