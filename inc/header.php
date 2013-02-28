@@ -1,5 +1,7 @@
 <header>
-	<a href=""> 
-    	<img id="logo" src="" width="180" height="90" alt="">
+	<h1>
+	<a href="#" class="logotype"> 
+    	Widgeco Widgets
     </a>
+</h1>
 </header>
