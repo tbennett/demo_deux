@@ -68,7 +68,7 @@ mysqli_close($db);
       <?php
 	  	
 		//loop through $items and build div for each
-		for($i = 0; i < count($items); $i++)
+		for($i = 0; $i < count($items); $i++)
 		{
 			echo '<div class="widget">';
 			echo $items[$i];
