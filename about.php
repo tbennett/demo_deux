@@ -1,4 +1,5 @@
 <?php
+require_once('inc/config.php');
 
 //get all content related to this page (home)
   $sql = "SELECT * FROM site_content WHERE page_name='about'";
