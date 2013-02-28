@@ -80,7 +80,7 @@ mysqli_close($db);
 				<textarea name="message" cols="30" rows="5" 
 				placeholder="type comments here"></textarea><br class="clearfloat"></li>
 				
-				<li><label for="submitted"></label>
+				<li><label for="submitted">&nbsp;</label>
 				<input type="submit" name="submitted" value="submit comments now" />
 				<br class="clearfloat">
 				</li>
