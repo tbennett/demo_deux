@@ -53,7 +53,7 @@ mysqli_close($db);
   <article class="content">
     <h1>Contact</h1>
     <section>
-     <h2>How to use this document</h2>
+     <h2>How much do you love us?</h2>
       <p><?php echo $intro; ?></p>
     </section>
     <section>

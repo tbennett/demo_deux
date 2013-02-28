@@ -1,3 +1,6 @@
+@nav_base: #C6D580;
+
+
 
 body {
 	font: 90%/1.4 Verdana, Arial, Helvetica, sans-serif;
@@ -9,10 +12,11 @@ body {
 
 p{margin-bottom:2em;}
 
+
 #home_page a[href="index.php"],
 #about_page a[href="about.php"],
 #contact_page a[href="contact.php"] {
-	background-color:red;
+background-color: darken(@nav_base, 20%);
 	color:#fff;
 	font-weight:bold;
 }
@@ -123,6 +127,10 @@ label {
 	margin-right:1.25em;
 	color:#fff;
 	}
+	
+input[type='submit']{
+	height:18px;
+}
 
 
 ul.nav {
