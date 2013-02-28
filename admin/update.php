@@ -65,9 +65,7 @@
         <option value="contact">contact</option>
     </select>
     <label for="body">body</label>
-    <textarea name="body" rows="10" cols="30">
-		<?php echo $blurb; ?>
-    </textarea>
+    <textarea name="body" rows="10" cols="30"><?php echo $blurb; ?></textarea>
     <input type="submit" name="submitted" value="update now" />
     </fieldset>
 </form>
