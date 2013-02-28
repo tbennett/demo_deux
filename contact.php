@@ -64,7 +64,7 @@ mysqli_close($db);
 			echo '<li>' . @$message_error . '</li>'; 
 			?>
 		</ul>
-      	<form>
+      	<form action="$_SERVER['PHP_SELF']" method="post">
 			<fieldset>
 				<legend><h2>Contact Us</h2></legend>
 				<ul>
