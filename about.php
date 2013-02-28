@@ -5,6 +5,8 @@ require_once('inc/config.php');
   $sql = "SELECT * FROM site_content WHERE page_name='about'";
   $myData = $db->query($sql);
   
+  $items = array();
+  
   //create container for each piece of data
   while($row = $myData->fetch_assoc())
   {
@@ -15,6 +17,10 @@ require_once('inc/config.php');
 	elseif($row['section_name'] === 'blurb')
 	{
 		$blurb = $row['content'];
+	}
+	elseif($row['section_name'] === 'widgets')
+	{
+		$items[] = $row['content'];
 	}
 	  
   }
