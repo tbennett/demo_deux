@@ -1,6 +1,6 @@
 <?php
 require_once('inc/config.php');
-require_once('validation.php');
+require_once('inc/validation.php');
 
 
 	// * IMPORTANT * Set your email information here
