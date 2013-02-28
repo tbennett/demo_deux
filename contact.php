@@ -3,7 +3,7 @@ require_once('inc/config.php');
 
 
 //get all content related to this page (home)
-  $sql = "SELECT * FROM site_content WHERE page_name='home'";
+  $sql = "SELECT * FROM site_content WHERE page_name='contact'";
   $myData = $db->query($sql);
   
   //create container for each piece of data
@@ -19,6 +19,8 @@ require_once('inc/config.php');
 	}
 	  
   }
+
+mysqli_close($db);
 
 ?>
 

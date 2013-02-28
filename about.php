@@ -19,7 +19,9 @@ require_once('inc/config.php');
 	  
   }
 
-<?
+mysqli_close($db);
+
+?>
 
 
 <!doctype html>

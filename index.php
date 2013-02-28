@@ -20,6 +20,9 @@
 	}
 	  
   }
+
+mysqli_close($db);
+
 ?>
 
 
