@@ -1,3 +1,25 @@
+<?php
+
+//get all content related to this page (home)
+  $sql = "SELECT * FROM site_content WHERE page_name='home'";
+  $myData = $db->query($sql);
+  
+  //create container for each piece of data
+  while($row = $myData->fetch_assoc())
+  {
+	if($row['section_name'] === 'intro')
+	{
+		$intro = $row['content'];
+	}
+	elseif($row['section_name'] === 'blurb')
+	{
+		$blurb = $row['content'];
+	}
+	  
+  }
+
+?>
+
 <!doctype html>
 <html>
 <head>
