@@ -1,4 +1,5 @@
 <?php
+/*
 // * IMPORTANT * Set your email information here
 define('DESTINATION_EMAIL','tbennett@aii.edu');
 define('MESSAGE_SUBJECT','form Demo');
@@ -28,14 +29,14 @@ require_once('inc/validation.php');
   }
 
 mysqli_close($db);
-
+*/
 ?>
 
 <!doctype html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Untitled Document</title>
+<title>Widgeco Widgets - Contact</title>
 <link href="newsgothic/stylesheet.css" rel="stylesheet" type="text/css">
 <link href="css/main.css" rel="stylesheet" type="text/css"><!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -80,8 +81,8 @@ mysqli_close($db);
 				<textarea name="message" cols="30" rows="5" 
 				placeholder="type comments here"></textarea><br class="clearfloat"></li>
 				
-				<li><label for="submitted">&nbsp;</label>
-				<input type="submit" name="submitted" value="submit comments now" />
+				<li><label>&nbsp;</label>
+					<a class="button large orange awesome submit">submit comments now »</a>
 				<br class="clearfloat">
 				</li>
 				</ul>
