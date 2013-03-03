@@ -1,5 +1,5 @@
 <?php
-
+/*
 // * IMPORTANT * Set your email information here
 define('DESTINATION_EMAIL','tbennett@aii.edu');
 define('MESSAGE_SUBJECT','form Demo');
@@ -29,7 +29,7 @@ require_once('inc/validation.php');
   }
 
 mysqli_close($db);
-
+*/
 ?>
 
 <!doctype html>
@@ -58,23 +58,26 @@ mysqli_close($db);
       <p><?php echo $intro; ?></p>
     </section>
     <section>
-		<ul class="errors">
+		<div class="errors">
+		<ul>
 			<?php 
 			echo '<li>' . @$name_error . '</li>'; 
 			echo '<li>' . @$email_error . '</li>'; 
 			echo '<li>' . @$message_error . '</li>'; 
 			?>
 		</ul>
-      	<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+		</div>
+		
+      	<form id="myform" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
 			<fieldset>
 				<legend><h2>Contact Us</h2></legend>
 				<ul>
 				<li><label for="name">Name:</label>
-				<input type="text" name="name" placeholder="type name here" />
+				<input type="text" name="name" placeholder="type name here" class="required" />
 				<br class="clearfloat"></li>
 				
 				<li><label for="email">Email:</label>
-				<input type="text" name="email" placeholder="type email here" />
+				<input type="text" name="email" placeholder="type email here" class="required email" />
 				<br class="clearfloat"></li>
 				
 				<li><label for="message">Comments:</label>
@@ -97,5 +100,23 @@ mysqli_close($db);
   <?php include_once('inc/footer.php'); ?>
   
   <!-- end .container --></div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.9.0.min.js"><\/script>')</script>
+
+<script src="js/jquery.validate.min.js"></script>
+<script>
+	$(document).ready(function(){
+		var errors = $('.errors');
+		$('#myform').validate({
+			errorContainer: errors,
+			errorLabelContainer: $("ul", errors)});
+		
+		$('.submit').click(function(e){
+			e.preventDefault();
+			$('#myform').submit();
+		});
+	});
+</script>
 </body>
 </html>
