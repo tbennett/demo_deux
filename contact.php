@@ -1,5 +1,5 @@
 <?php
-/*
+
 // * IMPORTANT * Set your email information here
 define('DESTINATION_EMAIL','tbennett@aii.edu');
 define('MESSAGE_SUBJECT','form Demo');
@@ -29,7 +29,7 @@ require_once('inc/validation.php');
   }
 
 mysqli_close($db);
-*/
+
 ?>
 
 <!doctype html>

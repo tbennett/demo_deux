@@ -1,4 +1,4 @@
-<?php
+<?php 
 require_once('inc/config.php');
 
 //get all content related to this page (home)
