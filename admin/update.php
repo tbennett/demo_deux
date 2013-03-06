@@ -3,10 +3,13 @@
 	require_once('../inc/config.php');
 	
 	
+	//catch user selection from dropdown
+	$page = $_GET['p'];
+		
   //get all content related to this page (home)
   $sql = "SELECT * 
   FROM site_content 
-  WHERE page_name='home' 
+  WHERE page_name='$page' 
   AND section_name='blurb'";
   $myData = $db->query($sql);
   
@@ -27,7 +30,7 @@
 	  
 	  $sql = "UPDATE site_content
 	  SET content='$user_content'
-	  WHERE page_name='home'
+	  WHERE page_name='$page'
 	  AND section_name='blurb'";
 	  
 	  $myData = $db->query($sql);
