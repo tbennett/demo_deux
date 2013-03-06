@@ -59,7 +59,7 @@
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 	<fieldset>
     <legend>Update Page Info</legend>
-    <select>
+    <select id="page" onchange="set_page(this)">
     	<option value="home" selected="home">home</option>
         <option value="about">about</option>
         <option value="contact">contact</option>
@@ -70,6 +70,12 @@
     </fieldset>
 </form>
 
-
+<script>
+	function set_page(obj)
+	{
+		var page = obj.value;
+		window.location = './update.html?p='+ page;
+	}
+</script>
 </body>
 </html>
