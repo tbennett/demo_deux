@@ -70,6 +70,7 @@
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 	<fieldset>
     <legend>Update Page Info</legend>
+    <input type="hidden" id="tmp" name="tmp" value="<?php echo $page ?>" />
     <select id="page" onchange="set_page(this)">
     	<option value="home" selected="home">home</option>
         <option value="about">about</option>
