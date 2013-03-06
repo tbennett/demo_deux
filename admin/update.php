@@ -74,7 +74,7 @@
 	function set_page(obj)
 	{
 		var page = obj.value;
-		window.location = './update.html?p='+ page;
+		window.location = './update.php?p='+ page;
 	}
 </script>
 </body>
