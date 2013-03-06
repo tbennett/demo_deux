@@ -3,8 +3,16 @@
 	require_once('../inc/config.php');
 	
 	
-	//catch user selection from dropdown
-	$page = $_GET['p'];
+	//catch user selection from dropdown and sanitze
+	$tmp = $_GET['p'];
+	if($tmp === 'home' || $tmp === 'about' || $tmp === 'contact')
+	{
+		$page = $tmp;	
+	}
+	else
+	{
+		$page = 'home';
+	}
 		
   //get all content related to this page (home)
   $sql = "SELECT * 
