@@ -34,6 +34,7 @@
   if(isset($_POST['submitted']))
   {
 	  $user_content = mysqli_real_escape_string($db, $_POST['body']);
+	  $page = mysqli_real_escape_string($db, $_POST['tmp']);
 	  
 	  
 	  $sql = "UPDATE site_content
