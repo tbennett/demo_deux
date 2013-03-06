@@ -28,6 +28,11 @@
 	{
 		$blurb = $row['content'];
 	}
+	
+	if($row['section_name'] === 'intro')
+	{
+		$intro = $row['content'];
+	}
 	  
   }
   
@@ -77,6 +82,10 @@
         <option value="about">about</option>
         <option value="contact">contact</option>
     </select>
+    
+    <label for="intro">intro</label>
+    <textarea name="intro" rows="10" cols="30"><?php echo $intro; ?></textarea>
+    
     <label for="body">body</label>
     <textarea name="body" rows="10" cols="30"><?php echo $blurb; ?></textarea>
     <input type="submit" name="submitted" value="update now" />
