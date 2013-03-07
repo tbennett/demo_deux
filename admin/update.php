@@ -102,7 +102,7 @@
 
 <script>
 	window.onload = function(){
-		document.getElementById(<?php echo $page; ?>).setAttribute('selected', 'selected');
+		document.getElementById("<?php echo $page; ?>").setAttribute('selected', 'selected');
 	};
 	
 	function set_page(obj)
