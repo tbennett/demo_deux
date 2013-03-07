@@ -107,8 +107,7 @@
 	
 	function set_page(obj)
 	{
-		var page = obj.value;
-		window.location = './update.php?p='+ '<?php echo $page; ?>';
+		window.location = './update.php?p='+ obj.value;
 	}
 </script>
 </body>
