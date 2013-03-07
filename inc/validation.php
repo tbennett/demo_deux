@@ -90,6 +90,10 @@ if(@$_POST['submitted'])
 			exit();
 		}
 		
+	}
+	else
+	{
+		echo print_r(errors);
 	}//end if count
 	
 } //ends if submitted
