@@ -102,13 +102,13 @@
 
 <script>
 	window.onload = function(){
-		document.getElementById("<?php echo $page; ?>").setAttribute('selected', 'selected');
+		document.getElementById("<?php echo $page; ?>").selected = 'selected';
 	};
 	
 	function set_page(obj)
 	{
 		var page = obj.value;
-		window.location = './update.php?p='+ page;
+		window.location = './update.php?p='+ <?php echo $page; ?>;
 	}
 </script>
 </body>
