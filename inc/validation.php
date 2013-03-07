@@ -72,7 +72,7 @@ if(@$_POST['submitted'])
 		$subject			= 	MESSAGE_SUBJECT;
 		$body				=	"$name \r\n<br/> $email \r\n<br /> $message";
 
-		
+		echo 'test'; exit();
 		if(mail($destination, $subject, $body, $headers))
 		{
 		
