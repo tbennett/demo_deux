@@ -10,6 +10,7 @@ $message;
 
 if(@$_POST['submitted'])
 {
+	echo 'test1'; exit();
 	//create vars from user input
 	$name 			= 		trim(@$_POST['name']);
 	$email			= 		trim(@$_POST['email']);
