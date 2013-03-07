@@ -3,9 +3,9 @@
 
 //print "included OK";     // uncomment  to check the page is included in the form
 
-$name 			= 		'';
-$email			= 		'';
-$message 		= 		'';
+$name;
+$email;
+$message;
 
 
 if(@$_POST['submitted'])
@@ -93,7 +93,7 @@ if(@$_POST['submitted'])
 	}
 	else
 	{
-		echo print_r(errors);
+		echo print_r($error_msg);
 	}//end if count
 	
 } //ends if submitted
