@@ -55,7 +55,7 @@ mysqli_close($db);
     <h1>Contact</h1>
     <section>
      <h2>How much do you love us?</h2>
-      <p><?php echo $blurb; ?></p>
+      <p><?php echo $intro; ?></p>
     </section>
     <section>
 		<div class="errors">
@@ -94,12 +94,12 @@ mysqli_close($db);
     </section>
    
     </section>
-  <!-- end .content --></article>
+  </article><!-- end .content -->
 
   
   <?php include_once('inc/footer.php'); ?>
   
-  <!-- end .container --></div>
+  </div><!-- end .container -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery-1.9.0.min.js"><\/script>')</script>
@@ -114,8 +114,7 @@ mysqli_close($db);
 			validClass: "success",
 			wrapper: 'li',
 			messages: {
-				first_name: "Please enter your first name.",
-				last_name: "Please enter your last name.",
+				name: "Please enter your full name.",
 				email:"Please enter a valid email address.",
 			}
 		});
