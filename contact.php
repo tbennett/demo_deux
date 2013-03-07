@@ -1,5 +1,5 @@
 <?php
-/*
+
 // * IMPORTANT * Set your email information here
 define('DESTINATION_EMAIL','tbennett@aii.edu');
 define('MESSAGE_SUBJECT','form Demo');
@@ -10,7 +10,7 @@ define('REDIRECT_URL', 'index.php');
 require_once('inc/config.php');
 require_once('inc/validation.php');
 
-//get all content related to this page (home)
+//get all content related to this page
   $sql = "SELECT * FROM site_content WHERE page_name='contact'";
   $myData = $db->query($sql);
   
@@ -29,7 +29,7 @@ require_once('inc/validation.php');
   }
 
 mysqli_close($db);
-*/
+
 ?>
 
 <!doctype html>
@@ -55,7 +55,7 @@ mysqli_close($db);
     <h1>Contact</h1>
     <section>
      <h2>How much do you love us?</h2>
-      <p><?php echo $intro; ?></p>
+      <p><?php echo $blurb; ?></p>
     </section>
     <section>
 		<div class="errors">
@@ -110,7 +110,15 @@ mysqli_close($db);
 		var errors = $('.errors');
 		$('#myform').validate({
 			errorContainer: errors,
-			errorLabelContainer: $("ul", errors)});
+			errorLabelContainer: $("ul", errors),
+			validClass: "success",
+			wrapper: 'li',
+			messages: {
+				first_name: "Please enter your first name.",
+				last_name: "Please enter your last name.",
+				email:"Please enter a valid email address.",
+			}
+		});
 		
 		$('.submit').click(function(e){
 			e.preventDefault();
