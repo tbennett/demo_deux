@@ -42,13 +42,14 @@
 	  $user_intro = mysqli_real_escape_string($db, $_POST['intro']);
 	  $page = mysqli_real_escape_string($db, $_POST['tmp']);
 	  
-	  
+
 	  $sql1 = "UPDATE site_content
 	  SET content='$user_blurb'
 	  WHERE page_name='$page'
 	  AND section_name='blurb'";
-	  
+
 	  $myData = $db->query($sql1);
+
 
 	  $sql2 = "UPDATE site_content
 	  SET content='$user_intro'
@@ -56,6 +57,8 @@
 	  AND section_name='intro'";
 
 	  $myData = $db->query($sql2);
+
+	  mysqli_close($db);
 	  
 	 header('Location: ../');
   }
@@ -91,11 +94,19 @@
         <option value="contact" id="contact">contact</option>
     </select>
     
-    <label for="intro">intro</label>
-    <textarea name="intro" rows="10" cols="30"><?php echo $intro; ?></textarea>
+    <?php
+
+    if ($intro) {
+    	echo'<label for="intro">intro</label>' .
+    	'<textarea name="intro" rows="10" cols="30">' . $intro . '</textarea>';
+    }
     
-    <label for="body">body</label>
-    <textarea name="body" rows="10" cols="30"><?php echo $blurb; ?></textarea>
+    if($blurb){
+    	echo '<label for="body">body</label>' . 
+    	'<textarea name="body" rows="10" cols="30">' . $blurb . '</textarea>';
+	}
+	
+    ?>
     <input type="submit" name="submitted" value="update now" />
     </fieldset>
 </form>
