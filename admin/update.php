@@ -17,8 +17,8 @@
   //get all content related to this page (home)
   $sql = "SELECT * 
   FROM site_content 
-  WHERE page_name='$page' 
-  AND section_name='blurb'";
+  WHERE page_name='$page'";
+
   $myData = $db->query($sql);
   
   //create container for each piece of data
@@ -38,20 +38,27 @@
   
   if(isset($_POST['submitted']))
   {
-	  $user_content = mysqli_real_escape_string($db, $_POST['body']);
+	  $user_blurb = mysqli_real_escape_string($db, $_POST['body']);
+	  $user_intro = mysqli_real_escape_string($db, $_POST['intro']);
 	  $page = mysqli_real_escape_string($db, $_POST['tmp']);
 	  
 	  
-	  $sql = "UPDATE site_content
-	  SET content='$user_content'
+	  $sql1 = "UPDATE site_content
+	  SET content='$user_blurb'
 	  WHERE page_name='$page'
 	  AND section_name='blurb'";
 	  
-	  $myData = $db->query($sql);
+	  $myData = $db->query($sql1);
+
+	  $sql2 = "UPDATE site_content
+	  SET content='$user_intro'
+	  WHERE page_name='$page'
+	  AND section_name='intro'";
+
+	  $myData = $db->query($sql2);
 	  
 	 header('Location: ../');
   }
-  
   
   
 ?>
@@ -78,7 +85,8 @@
     <legend>Update Page Info</legend>
     <input type="hidden" id="tmp" name="tmp" value="<?php echo $page ?>" />
     <select id="page" onchange="set_page(this)">
-    	<option value="home" selected="home">home</option>
+    	<option value="">Choose a page to edit</option>
+    	<option value="home">home</option>
         <option value="about">about</option>
         <option value="contact">contact</option>
     </select>
