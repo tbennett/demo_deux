@@ -72,6 +72,7 @@ mysqli_close($db);
 			<fieldset>
 				<legend><h2>Contact Us</h2></legend>
 				<ul>
+				<li><input type="hidden" value="submitted"></li>
 				<li><label for="name">Name:</label>
 				<input type="text" name="name" placeholder="type name here" class="required" />
 				<br class="clearfloat"></li>
