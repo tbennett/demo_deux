@@ -123,6 +123,7 @@ mysqli_close($db);
 		$('.submit').click(function(e){
 			e.preventDefault();
 			$('#myform').submit();
+			alert('s');
 		});
 	});
 </script>
