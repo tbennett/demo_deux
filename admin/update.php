@@ -86,9 +86,9 @@
     <input type="hidden" id="tmp" name="tmp" value="<?php echo $page ?>" />
     <select id="page" onchange="set_page(this)">
     	<option value="">Choose a page to edit</option>
-    	<option value="home">home</option>
-        <option value="about">about</option>
-        <option value="contact">contact</option>
+    	<option value="home" id="home">home</option>
+        <option value="about" id="about">about</option>
+        <option value="contact" id="contact">contact</option>
     </select>
     
     <label for="intro">intro</label>
@@ -101,6 +101,11 @@
 </form>
 
 <script>
+	window.onload = function(){
+		var page = <?php echo $page; ?>;
+		document.getElementById(page).setAttribute('selected', 'selected');
+	};
+	
 	function set_page(obj)
 	{
 		var page = obj.value;
