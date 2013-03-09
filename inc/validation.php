@@ -78,7 +78,7 @@ if(@$_POST['submitted'])
 			// test to see if form data is received.
 			echo '<link href="newsgothic/stylesheet.css" rel="stylesheet" type="text/css">
 			<link href="css/main.css" rel="stylesheet" type="text/css">';
-			echo "<div id="confirm">;
+			echo "<div id='confirm'>";
 			echo "<h1>Thanks for providing your insight</h1>";
 			echo "<p>Your message has been sent. Below is the info you provided:</p>";
 			echo "<ul>";
@@ -87,7 +87,7 @@ if(@$_POST['submitted'])
 			echo "<li>".$message."</li>";
 			echo "</ul>";
 			echo "<a href=\"". REDIRECT_URL ."\">Go Back to Home Page</a>";
-			echo "</div>;
+			echo "</div>";
 			exit();
 		}
 		
