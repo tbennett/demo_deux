@@ -72,21 +72,24 @@ mysqli_close($db);
 			<fieldset>
 				<legend><h2>Contact Us</h2></legend>
 				<ul>
-				<li><input type="hidden" value="submitted"></li>
 				<li><label for="name">Name:</label>
-				<input type="text" name="name" placeholder="type name here" class="required" />
+				<input type="text" name="name" placeholder="type name here" 
+				class="required" value="<?php echo @$name; ?>" />
 				<br class="clearfloat"></li>
 				
 				<li><label for="email">Email:</label>
-				<input type="text" name="email" placeholder="type email here" class="required email" />
+				<input type="text" name="email" placeholder="type email here" 
+				class="required email" value="<?php echo @$email; ?>" />
 				<br class="clearfloat"></li>
 				
 				<li><label for="message">Comments:</label>
 				<textarea name="message" cols="30" rows="5" 
-				placeholder="type comments here"></textarea><br class="clearfloat"></li>
+				placeholder="type comments here"><?php echo @$message; ?></textarea>
+				<br class="clearfloat"></li>
 				
 				<li><label>&nbsp;</label>
-					<a class="button large orange awesome submit">submit comments now »</a>
+					<input type="submit" name="submitted" value="submit comments now »" 
+					class="button large orange awesome submit" />
 				<br class="clearfloat">
 				</li>
 				</ul>
@@ -119,12 +122,7 @@ mysqli_close($db);
 				email:"Please enter a valid email address.",
 			}
 		});
-		
-		$('.submit').click(function(e){
-			e.preventDefault();
-			$('#myform').submit();
-			alert('s');
-		});
+
 	});
 </script>
 </body>
