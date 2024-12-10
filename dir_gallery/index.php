@@ -72,12 +72,10 @@ while ($image = $dir->read())
   }
 }
 ?>
-<!DOCTYPE html public "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
   <head>
     <title> Thumbnail Example </title>
-    <style type="text/css">
+    <style>
       body {
         font-family: Tahoma, Arial, Helvetica, sans-serif;
         font-size: 11px;

@@ -105,8 +105,8 @@ mysqli_close($db);
   
   </div><!-- end .container -->
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/jquery-1.9.0.min.js"><\/script>')</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-3.7.1.min.js"><\/script>')</script>
 
 <script src="js/jquery.validate.min.js"></script>
 <script>
